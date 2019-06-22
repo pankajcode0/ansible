@@ -1,0 +1,17 @@
+---
+  - hosts: all
+    become: yes
+    become_user: pankaj
+    become_method: sudo
+    gather_facts: true
+    tasks:
+      - name: Run the installer Anaconda
+        expect:
+          command: bash ~/Downloads/Anaconda3-2019.03-Linux-x86_64.sh
+          responses:
+            'Please, press ENTER to continue' : "\n"
+            'Do you accept the license terms' : "yes"
+            'Press ENTER to confirm the location' : "\n"
+            'Do you wish the installer to initialize Anaconda3 by running conda init': "yes"
+
+        

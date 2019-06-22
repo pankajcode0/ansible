@@ -1,0 +1,23 @@
+---
+  - hosts: all
+    gather_facts: true
+
+    vars_files:
+     - vars/paths.yml
+    tasks:
+    - name: Ansible copy file to remote server
+      copy:
+        src: "{{source}}"
+        dest: "{{destination}}"
+    - name: Run the installer Anaconda
+      command: bash ~/Downloads/Anaconda3-2019.03-Linux-x86_64.sh -b 
+    - name: add path
+      shell: export PATH=~/anaconda3/bin:$PATH && conda init 
+      args:
+       executable: /bin/bash
+    - name: Copy conda environment
+      copy:
+        src: ~/anaconda3/envs/myenv
+        dest: ~/anaconda3/envs
+
+   

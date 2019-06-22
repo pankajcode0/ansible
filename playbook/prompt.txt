@@ -1,0 +1,18 @@
+Please, press ENTER to continue
+
+--More--
+
+Do you accept the license terms? [yes|no]
+
+
+Anaconda3 will now be installed into this location:
+/home/test/Anaconda3
+- Press ENTER to confirm the location;
+-
+-
+[/home/test/anaconda3]
+
+
+Do you wish the installer to initialize 
+Anaconda3 by running conda init? [yes|no]
+

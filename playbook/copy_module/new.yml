@@ -1,0 +1,12 @@
+---
+  - hosts: all
+    become: yes
+    become_user: pankaj
+    gather_facts: true
+    tasks:
+      - name: Run the installer Anaconda
+        command: bash /tmp/Anaconda3-2019.03-Linux-x86_64.sh -b 
+      
+          
+
+        

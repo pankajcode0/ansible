@@ -1,0 +1,15 @@
+---
+  - hosts: all
+    become: true
+    become_user: pankaj
+    gather_facts: true
+
+      - name: Case insensitive password string match
+        expect:
+          command: passwd username
+          responses:
+            (?i)password: "MySekretPa$$word"
+        # you don't want to show passwords in your logs
+        no_log: true
+
+     

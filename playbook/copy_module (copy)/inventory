@@ -1,0 +1,2 @@
+[server]
+192.168.6.230 ansible_user=pankaj

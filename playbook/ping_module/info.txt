@@ -1,0 +1,1 @@
+run as - ansible -i ping_module -m ping all
